@@ -4,7 +4,9 @@
   "description": "A Simon game using JavaScript, HTML, and CSS.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "eslint": ".\\node_modules\\.bin\\eslint .",
+    "eslint:fix": ".\\node_modules\\.bin\\eslint . --fix",
+    "build": ".\\node_modules\\.bin\\babel .\\src\\js --out-dir .\\build\\js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +19,12 @@
   },
   "homepage": "https://github.com/3santiago3/Simon-Game#readme",
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
     "eslint": "^5.13.0"
+  },
+  "dependencies": {
+    "@babel/polyfill": "^7.2.5"
   }
 }
